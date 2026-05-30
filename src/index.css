@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0D0F24;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Custom Font Utilities */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+.font-oleoScript {
+  font-family: 'Oleo Script', cursive;
+}
+.font-anton {
+  font-family: 'Anton', sans-serif;
+}
+
+/* Standard CSS Animations & Keyframes (Straight vertical rotation!) */
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-pulse-subtle {
+  animation: pulseSubtle 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Custom Scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Modern Backdrop blur elements */
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.shrink-bounce {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes bagSpinIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-120deg) translateY(150px);
+  }
+  70% {
+    opacity: 0.9;
+    transform: scale(1.05) rotate(8deg) translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg) translateY(0);
+  }
+}
+
+.animate-bag-spin-in {
+  animation: bagSpinIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
