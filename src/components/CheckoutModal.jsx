@@ -74,8 +74,8 @@ export default function CheckoutModal({ flavor, quantity, price, image, isOpen, 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md">
-      <div className="relative w-full max-w-md bg-slate-900 border border-white/10 rounded-3xl p-5 md:p-6 text-white shadow-2xl overflow-hidden max-h-[95vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-md">
+      <div className="relative w-full sm:max-w-md bg-slate-900 border border-white/10 rounded-t-3xl sm:rounded-3xl p-4 sm:p-6 text-white shadow-2xl overflow-hidden max-h-[92vh] sm:max-h-[95vh] flex flex-col">
         {/* Absolute Background Highlights - Added pointer-events-none to prevent blocking the X close button */}
         <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-20 pointer-events-none transition-colors duration-500 ${
           flavor === 'blue' ? 'bg-blue-500' :

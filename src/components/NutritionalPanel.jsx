@@ -79,9 +79,16 @@ export default function NutritionalPanel({ flavor, isOpen, onClose }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-[420px] bg-slate-900/95 backdrop-blur-xl shadow-2xl z-50 transform transition-transform duration-500 ease-out border-r border-white/10 text-white flex flex-col p-6 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}
+      className={`fixed z-50 text-white flex flex-col
+        sm:top-0 sm:left-0 sm:h-full sm:w-[420px] sm:border-r sm:border-white/10
+        bottom-0 left-0 right-0 w-full sm:w-[420px] sm:rounded-none rounded-t-3xl
+        bg-slate-900/95 backdrop-blur-xl shadow-2xl
+        transform transition-transform duration-500 ease-out
+        p-5 sm:p-6
+        ${isOpen
+          ? 'translate-y-0 sm:translate-y-0 sm:translate-x-0'
+          : 'translate-y-full sm:translate-y-0 sm:-translate-x-full'
+        }`}
     >
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center gap-2">
