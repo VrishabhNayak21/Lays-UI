@@ -80,8 +80,8 @@ export default function NutritionalPanel({ flavor, isOpen, onClose }) {
   return (
     <div
       className={`fixed z-50 text-white flex flex-col
-        sm:top-0 sm:left-0 sm:h-full sm:w-[420px] sm:border-r sm:border-white/10
-        bottom-0 left-0 right-0 w-full sm:w-[420px] sm:rounded-none rounded-t-3xl
+        sm:top-0 sm:left-0 sm:h-full sm:w-[420px] sm:border-r sm:border-white/10 sm:max-h-full
+        bottom-0 left-0 right-0 w-full max-h-[60vh] sm:rounded-none rounded-t-3xl
         bg-slate-900/95 backdrop-blur-xl shadow-2xl
         transform transition-transform duration-500 ease-out
         p-5 sm:p-6
